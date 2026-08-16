@@ -1,0 +1,20 @@
+name: Build‑kernel‑dshanpi‑r1
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu‑latest
+    steps:
+      - name: Build Armbian kernel
+        uses: armbian/build/.github/actions/rebuild‑armbian@v25.11.1
+        with:
+          armbian_token: ${{ secrets.GITHUB_TOKEN }}
+          armbian_target: "kernel"
+          armbian_branch: "v25.11.1"
+          armbian_kernel_branch: "vendor"
+          armbian_release: "trixie"
+          armbian_board: "dshanpi‑r1"
+          armbian_ui: "minimal"
+          armbian_compress: "sha,deb"
+          armbian_runner_clean: "yes"
