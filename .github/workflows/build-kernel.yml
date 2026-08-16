@@ -14,7 +14,7 @@ jobs:
           armbian_branch: "v25.11.1"
           armbian_kernel_branch: "vendor"
           armbian_release: "trixie"
-          armbian_board: "dshanpi‑r1"
+          armbian_board: "dshanpi‑a1"
           armbian_ui: "minimal"
           armbian_compress: "sha,deb"
           armbian_runner_clean: "yes"
